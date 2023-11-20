@@ -1,0 +1,39 @@
+@charset "UTF-8";
+.head1{
+    margin: 0;
+    padding: 20px 30px;
+    top:0px;
+    color: #5c3e28;
+    height: 40px;
+    border-bottom: 2px solid #016171;
+    font-size: 30px;
+    background-color: #fffcdc;
+}
+
+.page{
+    margin: 0;
+    display: inline-block;
+    width: 100px;
+    color: #5c3e28;
+    text-align: center;
+    font-size: 20px;
+    text-decoration-line: none;
+    padding: 8px 0px;
+}
+.pages{
+    border-bottom :2px solid #016171;
+
+}
+.olink{
+    color:royalblue
+}
+footer{
+    border-top: 1px solid #016171;
+    background-color: #e9ded7;
+}
+.copyright{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 0;
+    height: 50px;
+}
