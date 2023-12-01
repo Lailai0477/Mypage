@@ -32,6 +32,23 @@ h3{
 .olink{
     color:royalblue
 }
+.pictable{
+    width: 300px;
+}
+.picgroup{
+    font-size: 25px;
+    font-weight: bold;
+    color: #5c3e28;
+    padding: 50px;
+    padding-bottom: 15px;
+}
+.picgroup2{
+    font-size: 20px;
+    font-weight: bold;
+    color: #5c3e28;
+    padding: 50px;
+    padding-bottom: 15px;
+}
 footer{
     border-top: 1px solid #016171;
     background-color: #e9ded7;
