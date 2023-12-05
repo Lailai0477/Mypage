@@ -40,6 +40,7 @@ h3{
     font-weight: bold;
     color: #5c3e28;
     padding-bottom: 15px;
+    text-align: center;
 }
 .picgroup2{
     font-size: 20px;
@@ -47,9 +48,15 @@ h3{
     color: #5c3e28;
     padding-bottom: 15px;
 }
+.TopLink{
+    color: #5c3e28;
+    font-size: 25px;
+    padding-top: 0;
+}
 footer{
     border-top: 1px solid #016171;
     background-color: #e9ded7;
+    text-align: center;
 }
 .copyright{
     font-size: 12px;
