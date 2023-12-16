@@ -34,7 +34,8 @@ h3{
 }
 
 .olink{
-    color:royalblue
+    color:royalblue;
+    font-weight: bold;
 }
 .pictable{
     width: 300px;
