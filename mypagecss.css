@@ -37,8 +37,10 @@ h3{
     color:royalblue;
     font-weight: bold;
 }
-.pictable{
-    width: 300px;
+.piccontainer{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .picgroup{
     font-size: 25px;
@@ -46,12 +48,15 @@ h3{
     color: #5c3e28;
     padding-bottom: 15px;
     text-align: center;
+    width: 300px;
 }
 .picgroup2{
     font-size: 20px;
     font-weight: bold;
     color: #5c3e28;
     padding-bottom: 15px;
+    width: 300px;
+
 }
 .TopLink{
     color: #5c3e28;
