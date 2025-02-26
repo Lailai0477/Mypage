@@ -26,6 +26,10 @@
                     let ringcount = document.getElementById('r0');
 
                     function countplus() {
+                        if (count >= 9999999) {
+                            count = 9999999;
+                            return;
+                        }
                         count++;
                         ringcount.innerHTML = count;
 
