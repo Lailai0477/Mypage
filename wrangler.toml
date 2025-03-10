@@ -1,0 +1,4 @@
+[[headers]]
+for = "/*.mp3"
+[headers.values]
+Content-Type = "audio/mpeg"
