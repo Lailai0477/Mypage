@@ -1,4 +1,4 @@
-const ring = new Audio('./bell.mp3');
+const ring = new Audio('https://lai-lai.info/sounds/bell.mp3');
 let count = 0;
 let ringcount = document.getElementById('r0');
 
