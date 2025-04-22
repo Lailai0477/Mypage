@@ -29,6 +29,9 @@ h3{
     text-decoration-line: none;
     padding: 8px 0px;
 }
+.page:hover{
+    color:#5e4030
+}
 .pages{
     border-bottom :2px solid #016171;
 }
