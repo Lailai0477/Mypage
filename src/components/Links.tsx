@@ -17,6 +17,8 @@ export default function Links() {
                 <li><a className="olink" href="https://www.eka.earth" rel="friend colleague">Ekasiliconさん</a></li>
                 <li><a className="olink" href="https://www.eniehack.net/~eniehack/" rel="colleague">Nakayaさん</a></li>
                 <li><a className="olink" href="https://raspi0124.dev/" rel="colleague">raspi0124さん</a></li>
+                <li><a class="olink" href="https://210o.net/" rel="colleague">ぱうろさん</a></li>
+                <li><a class="olink" href="https://shoga.dev/" rel="friend colleague">しょうが&#129754;</a></li>
             </ul>
             <p>相互リンク募集中ー<br />
             バナー画像はこちらからどうぞ！↓</p>
