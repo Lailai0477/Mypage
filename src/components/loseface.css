@@ -1,28 +1,28 @@
 @charset "UTF-8";
-h2{
+.lf-h2{
     font-size: 40px;
     text-align: center;
     margin-bottom: 40px;
 }
-body{
+.lf-body{
     overflow: hidden;
 }
-.main{
+.lf-main{
     display: grid;
     place-items: center;
     height: 90vh;
 }
-.houkoku{
+.lf-houkoku{
     display: flex;
     margin: 8px 0px;
     align-items: center;
 }
-.btncnt{
+.lf-btncnt{
     display: grid;
     align-content: center;
     align-items: center;
 }
-.losebtn{
+.lf-losebtn{
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -36,20 +36,23 @@ body{
     gap: 10px;
     touch-action: manipulation;
 }
-.count{
+.lf-count{
     font-size: 30px;
     display: flex;
     align-items: flex-end;
 }
-.share_twitter {
+.lf-share_twitter {
     background-color: #1da1f2;
     padding: 8px 24px;
 	border-radius: 20px;
 	color: #fff;
 	text-decoration: none;
 	transition: 0.4s;
-  }
-footer{
+}
+.lf-caution{
+    color: crimson;
+}
+.lf-footer{
     border-top: 1px solid #016171;
     background-color: #e9ded7;
     text-align: center;
@@ -61,7 +64,7 @@ footer{
     bottom: 0;
     left: 0;
 }
-.copyright{
+.lf-copyright{
     color: black;
     font-size: 15px;
     text-align: center;
