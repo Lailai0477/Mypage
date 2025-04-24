@@ -7,6 +7,7 @@
     height: 40px;
     font-size: 30px;
     background-color: #fffcdc;
+    font-family: 'Noto Sans JP';
 }
 .head2{
     border-bottom: 2px solid #016171;
@@ -23,14 +24,19 @@ h3{
     margin: 0;
     display: inline-block;
     width: 100px;
-    color: #5c3e28;
+    color: #73553f;
     text-align: center;
     font-size: 20px;
     text-decoration-line: none;
     padding: 8px 0px;
+    font-family: 'Noto Sans JP';
+}
+.page.active{
+    font-weight:900;
+    color: #463833;
 }
 .page:hover{
-    color:#5e4030
+    color: #ffe793;
 }
 .pages{
     border-bottom :2px solid #016171;
@@ -76,4 +82,8 @@ footer{
     text-align: center;
     padding-top: 0;
     height: 50px;
+}
+
+.main{
+    margin-left: 40px;
 }

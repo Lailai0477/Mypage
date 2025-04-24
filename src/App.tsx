@@ -1,32 +1,23 @@
-import './App.css'
-import { Header } from './components/Header'
+import React from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Top from "./components/Top";
+import Links from "./components/Links";
+import Works from "./components/Works";
+import Otomodachi from "./components/Otomodachi"
+import Loseface from "./components/Loseface";
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
-    <Header thisHeader='top'/>
-    <div className="main">
-        <article>
-            <h2>Top page</h2>
-            <p>らいらいのページへようこそ！</p>
-            <h3>らいらいについて</h3>
-            <img src="imgs\icons.png" alt="Me" height="75px" width="75px" />
-            <p>Y県S市出身。カワウソが好き。スープ系の料理が好き。人間となかよくなりたい。</p>
-            <h3>おともだち</h3>
-            <ul>
-                <li><a className="olink" href="Otomodachi.html">おともだち一覧</a></li>
-            </ul>
-            <h3>顔を無くすボタン</h3>
-            <ul>
-                <li><a className="olink" href="loseface.html">顔を無くすボタン</a></li>
-            </ul>
-        </article>
-    </div>
-    <footer>
-        <p className="copyright">©2025 Lai_lai</p>
-    </footer>
+    <Routes>
+    <Route path="/" element={<Top />} />
+    <Route path="/links" element={<Links />} />
+    <Route path="/works" element={<Works />} />
+    <Route path="/otomodachi" element={<Otomodachi />} />
+    <Route path="/loseface" element={<Loseface />} />
+    </Routes>
     </>
   )
 }
 
-export default App
+export default App;
