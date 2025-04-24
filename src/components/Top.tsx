@@ -11,7 +11,7 @@ function App() {
             <h2>Top page</h2>
             <p>らいらいのページへようこそ！</p>
             <h3>らいらいについて</h3>
-            <img src="imgs\icons.png" alt="Me" height="75px" width="75px" />
+            <img src="/imgs/icons.png" alt="Me" height="75px" width="75px" />
             <p>Y県S市出身。カワウソが好き。スープ系の料理が好き。人間となかよくなりたい。</p>
             <h3>おともだち</h3>
             <ul>

@@ -17,7 +17,7 @@ export default function Works() {
         <h3>制作物</h3>
         <div>
             この項目は準備中です……<br />
-            <img src="imgs/junbichu.png" alt="準備中・・・" width="200" height="150" />
+            <img src="/imgs/junbichu.png" alt="準備中・・・" width="200" height="150" />
         </div>
     </div>
     <footer>

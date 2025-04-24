@@ -22,7 +22,7 @@ export default function Links() {
             </ul>
             <p>相互リンク募集中ー<br />
             バナー画像はこちらからどうぞ！↓</p>
-            <img src="imgs/banner.png" alt="バナー" height="40" width="200" />
+            <img src="/imgs/banner.png" alt="バナー" height="40" width="200" />
         </div>
         <footer>
             <p className="copyright">©2025 Lai_lai</p>

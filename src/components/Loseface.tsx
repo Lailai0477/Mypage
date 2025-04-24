@@ -3,7 +3,7 @@ import './loseface.css'
 import { useState } from 'react';
 
 export default function Loseface() {
-    const ring = new Audio('sound/bell.mp3');
+    const ring = new Audio('/sound/bell.mp3');
     const [count, setCount] = useState(0);
 
     function countplus() {
@@ -37,7 +37,7 @@ export default function Loseface() {
             <article>
                 <h2 className='ls-h2'>顔を無くすボタン</h2>
                 <div className="lf-btncnt">
-                    <button onClick={countplus} className="lf-losebtn">顔を無くす<img className="lf-shyshy" src="https://noface.lai-lai.info/noface.JPG" height="40px" width="40px" /></button>
+                    <button onClick={countplus} className="lf-losebtn">顔を無くす<img className="lf-shyshy" src="/imgs/noface.jpg" height="40px" width="40px" /></button>
                 </div>
                 <div className='lf-caution'>※音が出ます</div>
                 <div className="lf-houkoku">
