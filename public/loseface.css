@@ -23,7 +23,7 @@
     align-items: center;
 }
 .lf-losebtn{
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
@@ -44,7 +44,7 @@
 .lf-share_twitter {
     background-color: #1da1f2;
     padding: 8px 24px;
-	border-radius: 20px;
+    border-radius: 20px;
 	color: #fff;
 	text-decoration: none;
 	transition: 0.4s;

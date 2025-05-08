@@ -4,6 +4,7 @@ import Top from "./components/Top";
 import Links from "./components/Links";
 import Works from "./components/Works";
 import Otomodachi from "./components/Otomodachi"
+import NotFound from "./components/NotFound";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
     <Route path="/links" element={<Links />} />
     <Route path="/works" element={<Works />} />
     <Route path="/otomodachi" element={<Otomodachi />} />
+    <Route path="*" element={<NotFound />} />
     </Routes>
     </>
   )
