@@ -19,7 +19,7 @@ function App() {
             </ul>
             <h3>顔を無くすボタン</h3>
             <ul>
-                <li><a className='olink' href='/loseface.html' >顔を無くすボタン</a></li>
+                <li><a className='olink' target='_blank' href='/loseface.html' >顔を無くすボタン</a></li>
             </ul>
         </article>
     </div>
