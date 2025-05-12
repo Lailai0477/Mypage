@@ -7,12 +7,13 @@ export default function Works() {
     <Header thisHeader='works'/>
     <div className="main">
         <h2>Works</h2>
-        <h3>雑サブドメイン</h3>
+        <h3>雑サブドメイン(リンク)</h3>
         <ul>
             <li><a className="olink" href="https://bye-bye.lai-lai.info/">bye-bye.lai-lai.info</a></li>
             <li><a className="olink" href="https://e.lai-lai.info/">e.lai-lai.info</a></li>
             <li><a className="olink" href="https://noface.lai-lai.info/">noface.lai-lai.info</a></li>
             <li><a className="olink" href="https://cho-sei.lai-lai.info/">cho-sei.lai-lai.info</a></li>
+            <li><a className="olink" href="/zdk-comm-generator.html">/zdk-comm-generator</a></li>
         </ul>
         <h3>制作物</h3>
         <div>
