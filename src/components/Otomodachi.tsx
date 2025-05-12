@@ -1,14 +1,81 @@
 import '../App.css'
 import { Header } from './Header'
+import { db } from '../firebase';
+import { collection, getDocs, query, DocumentData, QueryDocumentSnapshot, orderBy } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
 
 export default function Otomodachi() {
+  interface Item {
+    id: string;
+    name: string;
+    alt: string;
+    imgsrc: string;
+    order: number
+  }
+
+  const mapDocToItem = (doc: QueryDocumentSnapshot<DocumentData>): Item => {
+    const data = doc.data();
+    return {
+      id: doc.id,
+      name: data.name as string, // 型アサーション
+      alt: data.alt as string,
+      imgsrc: data.imgsrc as string,
+      order: data.order as number,
+    };
+  };
+  
+  const [items, setItems] = useState<Item[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        // "otomodachi" コレクションへの参照を取得
+        const itemsCollectionRef = collection(db, "otomodachi");
+
+        // クエリを作成 
+        const q = query(itemsCollectionRef, orderBy("order", "asc"));
+
+        // ドキュメントを取得
+        const querySnapshot = await getDocs(q);
+
+        // 取得したドキュメントを Item[] 型の配列に変換
+        const fetchedItems: Item[] = querySnapshot.docs.map(mapDocToItem);
+
+        setItems(fetchedItems);
+      } catch (err) {
+        console.error("Error fetching documents: ", err);
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("An unknown error occurred");
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchItems();
+  }, []); // 空の依存配列で、コンポーネントのマウント時に一度だけ実行
+
+  if (loading) {
+    return <p>Loading items...</p>;
+  }
+
+  if (error) {
+    return <p>Error loading items: {error}</p>;
+  }
+
   return (
     <>
     <Header thisHeader='other'/>
     <div className="main">
         <h3>おともだち一覧</h3>
         <div className="piccontainer" >
-            <div className="picgroup">
+            {/* <div className="picgroup">
                 <img src="/imgs/Lai.JPG" alt="ライ" height="200" width="300" />
                 らい(らいらい)
             </div>
@@ -45,7 +112,7 @@ export default function Otomodachi() {
                 ねいねい(クッションのすがた)
             </div>
             <div className="picgroup">
-                <img src="/imgs/Noname.JPG" alt="Noname" height="200" width="300" />
+                <img src="/imgs/Shui_shui.JPG" alt="Noname" height="200" width="300" />
                 名前決まってない子
             </div>
             <div className="picgroup">
@@ -107,7 +174,14 @@ export default function Otomodachi() {
             <div className="picgroup">
                 <img src="/imgs/many_2.jpg" alt="そのほかの子たち2" height="200" width="300" />
                 その他の皆さん2
-            </div>
+            </div> */}
+            {items.map(item => (
+              <>
+              <div className={item.name.length<=10 ? "picgroup" : "picgroup2"} key={item.id}>
+                <img src={item.imgsrc} alt={item.alt} height="200" width="300" />
+                {item.name}
+              </div>
+              </>))}
         </div>
     </div>
     <footer>
