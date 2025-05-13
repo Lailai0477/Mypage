@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="shortcut icon" href="/imgs/favi.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zdk_gen</title>
+</head>
+<body>
+    <h1>ZDK委員会名称ジェネレータ</h1>
+    <input type="button" value="委員会を作る" onclick="makecomm(1)">
+    <input type="button" value="9委員会作る" onclick="makecomm(9)">
+    <div id="01"></div>
+    <script>
+        const material = ["総務", "学内", "行事", "生活", "環境", "教育", "調査", "広報", "新入生", "歓迎", "情報", "処理", "推進", "国際"];
+        function makecomm(time){
+            const container = document.getElementById("01");
+            container.innerHTML = "";
+            result = "";
+            let content = document.getElementById("01");
+            if (time === 1) {
+                let name = generateComm();
+                if (Math.random() <= 0.3) {
+                    name += "特別";
+                }
+                const div = document.createElement("div");
+                div.style.color = getColor(name);
+                div.textContent = name + "委員会";
+                container.appendChild(div);
+            } else {
+                for (let i = 0; i < 6; i++) {
+                    const name = generateComm();
+                    const div = document.createElement("div");
+                    div.style.color = getColor(name);
+                    div.textContent = name + "委員会";
+                    container.appendChild(div);
+                }
+                for (let i = 0; i < 3; i++) {
+                    const name = generateComm()+ "特別";
+                    const div = document.createElement("div");
+                    div.style.color = getColor(name);
+                    div.textContent = name + "委員会";
+                    container.appendChild(div);
+                }
+            }
+            
+        }
+        function generateComm(){
+            let result = "";
+            for (i = 0; i <Math.floor(Math.random() * 3 + 1); i++) {
+                result += material[Math.floor(Math.random() * material.length)];
+            }
+            return result;
+        }
+        function getColor(name) {
+            switch(name) {
+                case "総務":
+                    return '#2E5DA3';
+                case "学内行事":
+                    return '#8A1B23';
+                case "教育環境":
+                    return '#E9913D';
+                case "生活環境":
+                    return '#0D6361';
+                case "調査":
+                    return '#232262';
+                case "広報":
+                    return '#8A1E5E';
+                case "新入生歓迎特別":
+                    return '#D46A92';
+                case "情報処理推進特別":
+                    return '#8A9D4F';
+                case "国際特別":
+                    return '#54328F';
+                default:
+                    return 'black';
+            }
+        }
+    </script>
+</body>
+</html>
