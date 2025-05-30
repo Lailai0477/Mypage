@@ -1,3 +1,3 @@
 # Mypage
 
-そういう日も、あるよね
+https://lai-lai.info
