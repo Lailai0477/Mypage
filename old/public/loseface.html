@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loseing face button</title>
+        <link rel="stylesheet" href="/loseface.css">
+        <link rel="shortcut icon" href="/imgs/favi.png">
+        <meta charset="UTF-8" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="顔をなくすボタン" />
+        <meta name="twitter:description" content="顔をなくそう" />
+        <meta name="twitter:image" content="https://noface.lai-lai.info/noface.JPG" />
+    </head>
+    <body class="lf-body">
+        <div class="lf-main">
+            <article>
+                <h2 class="lf-h2">顔を無くすボタン</h2>
+                <div class="lf-btncnt">
+                    <button onclick="ring.currentTime = 0; ring.play(); countplus();" class="lf-losebtn">顔を無くす<img class="shyshy" src="https://noface.lai-lai.info/noface.JPG" height="40px" width="40px"></button>
+                </div>
+                <div class="lf-caution">※音が出ます</div>
+                <div class="lf-houkoku">
+                    私は顔を
+                    <div id="r0" class="lf-count">0</div>
+                    回無くしました
+                </div>
+                <a id="js-share-twitter" class="lf-share_twitter" href="https://twitter.com/share?&text=私は顔を無くしませんでした。%0A%23今日の顔ないない%0Ahttps://lai-lai.info/loseface" target="_blank" rel="nofollow noopener noreferrer" 
+                >顔を無くした回数をツイート</a>
+                <script>
+                    const ring = new Audio('sound/bell.mp3');
+                    let count = 0;
+                    let ringcount = document.getElementById('r0');
+
+                    function countplus() {
+                        if (count >= 9999999) {
+                            count = 9999999;
+                            return;
+                        }
+                        count++;
+                        ringcount.innerHTML = count;
+
+                        let makeTweet = "私は顔を "+count+" 回無くしました\n#今日の顔ないない\nhttps://lai-lai.info/loseface"
+
+                        const share_twitter = document.getElementById("js-share-twitter");
+                        share_twitter.setAttribute(
+                        "href",
+                        "https://twitter.com/share?" + "&text=" +encodeURIComponent(makeTweet));
+                    }
+                </script>
+            </article>
+        </div>
+        <footer class="lf-footer">
+            <a href="https://lai-lai.info/" class="lf-copyright">©2025 Lai_lai</a>
+        </footer>
+    </body>
+</html>

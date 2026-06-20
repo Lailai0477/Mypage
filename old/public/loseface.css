@@ -1,0 +1,72 @@
+@charset "UTF-8";
+.lf-h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.lf-body{
+    overflow: hidden;
+}
+.lf-main{
+    display: grid;
+    place-items: center;
+    height: 90vh;
+}
+.lf-houkoku{
+    display: flex;
+    margin: 8px 0px;
+    align-items: center;
+}
+.lf-btncnt{
+    display: grid;
+    align-content: center;
+    align-items: center;
+}
+.lf-losebtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border-color: silver;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.4s;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    gap: 10px;
+    touch-action: manipulation;
+}
+.lf-count{
+    font-size: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+.lf-share_twitter {
+    background-color: #1da1f2;
+    padding: 8px 24px;
+    border-radius: 20px;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.4s;
+}
+.lf-caution{
+    color: crimson;
+}
+.lf-footer{
+    border-top: 1px solid #016171;
+    background-color: #e9ded7;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    justify-items: start;
+    align-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.lf-copyright{
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 25;
+}
